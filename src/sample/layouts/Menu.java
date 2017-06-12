@@ -6,6 +6,7 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import sample.boxes.Confirm;
+import sample.common.Sizes;
 import sample.common.Words;
 
 /**
@@ -28,15 +29,19 @@ public class Menu {
         // Инициализируем кнопки
         // Продолжить игру
         contnue = new Button(Words.CONTINUE_BTN);
+        contnue.setMinWidth(Sizes.MENU_BTN_WIDTH);
 
         // Новая игра
         newGame = new Button(Words.NEW_GAME_BTN);
+        newGame.setMinWidth(Sizes.MENU_BTN_WIDTH);
 
         // Статистика
         stats = new Button(Words.STATS_BTN);
+        stats.setMinWidth(Sizes.MENU_BTN_WIDTH);
 
         // Выход из игры
         exit = new Button(Words.EXIT_BTN);
+        exit.setMinWidth(Sizes.MENU_BTN_WIDTH);
         exit.setOnAction(e -> closeProgram());
 
         // Ставим подтверждающее окно на крестик

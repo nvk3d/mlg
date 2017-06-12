@@ -10,4 +10,7 @@ public class Sizes {
     // Размеры всего окна
     public static final int WINDOW_HEIGHT = 600;
     public static final int WINDOW_WIDTH = 800;
+    // Размеры кнопок
+    public static final int MENU_BTN_WIDTH = 130;
+    public static final int CONFIRM_BTN_WIDTH = 50;
 }

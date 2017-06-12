@@ -26,6 +26,7 @@ public class Confirm {
         window = new Stage();
         // Указываем тип
         window.initModality(Modality.APPLICATION_MODAL);
+        window.setResizable(false);
         window.setTitle(title);
         window.setWidth(Sizes.CONFIRM_WINDOW_WIDTH);
         window.setHeight(Sizes.CONFIRM_WINDOW_HEIGHT);
@@ -34,6 +35,7 @@ public class Confirm {
         label.setText(message);
 
         yes = new Button(Words.YES_BTN);
+        yes.setMinWidth(Sizes.CONFIRM_BTN_WIDTH);
         // Закрываем это окно при клике на yes
         // и отдаем положительный результат завершения программы
         yes.setOnAction(event -> {
@@ -42,6 +44,7 @@ public class Confirm {
         });
 
         no = new Button(Words.NO_BTN);
+        no.setMinWidth(Sizes.CONFIRM_BTN_WIDTH);
         // Закрываем окно при клике на no
         // и отдаем отрицательный результат завершения программы
         no.setOnAction(event -> {

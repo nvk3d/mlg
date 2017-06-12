@@ -19,6 +19,7 @@ public class Main extends Application {
         menu = new Menu(primaryStage);
         // Ставим сцену
         main = new Scene(menu.getLayout(), Sizes.WINDOW_WIDTH, Sizes.WINDOW_HEIGHT);
+        window.setResizable(false);
         window.setScene(main);
         window.show();
     }
