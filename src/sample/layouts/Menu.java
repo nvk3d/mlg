@@ -21,11 +21,13 @@ public class Menu {
     public Menu (Stage primaryStage) {
         // Получаем главное окно
         window = primaryStage;
+
         // Инициализируем конструктор
         layout = new VBox(20);
         // Ставим вывеску
         label = new Label();
         label.setText(Words.MLG_GAME);
+
         // Инициализируем кнопки
         // Продолжить игру
         contnue = new Button(Words.CONTINUE_BTN);
