@@ -5,6 +5,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import sample.Game;
 import sample.boxes.Confirm;
 import sample.common.Sizes;
 import sample.common.Words;
@@ -17,8 +18,9 @@ public class Menu {
     private VBox layout;
     private Button contnue, newGame, stats, exit;
     private Label label;
+    private Game game;
 
-    public Menu (Stage primaryStage) {
+    public Menu(Stage primaryStage) {
         // Получаем главное окно
         window = primaryStage;
 
@@ -36,6 +38,10 @@ public class Menu {
         // Новая игра
         newGame = new Button(Words.NEW_GAME_BTN);
         newGame.setMinWidth(Sizes.MENU_BTN_WIDTH);
+        newGame.setOnAction(e -> {
+            game = new Game(window);
+            game.start();
+        });
 
         // Статистика
         stats = new Button(Words.STATS_BTN);
