@@ -32,7 +32,7 @@ public class Game {
         // Инициализируем рисовалку
         gc = canvas.getGraphicsContext2D();
         // Инициализация картинок
-        background = new Image(pathToImages + "icons.png");
+        background = new Image(pathToImages + "worm.png");
         // Инициализируем сцену
         scene = new Scene(group);
     }
