@@ -5,7 +5,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-import sample.Game;
+import sample.models.Game;
 import sample.boxes.Confirm;
 import sample.common.Sizes;
 import sample.common.Words;
