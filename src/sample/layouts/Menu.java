@@ -1,11 +1,13 @@
 package sample.layouts;
 
+import com.badlogic.gdx.backends.lwjgl.LwjglApplication;
+import com.badlogic.gdx.backends.lwjgl.LwjglApplicationConfiguration;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-import sample.models.Game;
+import sample.models.MlgGame;
 import sample.boxes.Confirm;
 import sample.common.Sizes;
 import sample.common.Words;
@@ -18,7 +20,7 @@ public class Menu {
     private VBox layout;
     private Button contnue, newGame, stats, exit;
     private Label label;
-    private Game game;
+    private MlgGame mlgGame;
 
     public Menu(Stage primaryStage) {
         // Получаем главное окно
@@ -39,8 +41,15 @@ public class Menu {
         newGame = new Button(Words.NEW_GAME_BTN);
         newGame.setMinWidth(Sizes.MENU_BTN_WIDTH);
         newGame.setOnAction(e -> {
-            game = new Game(window);
-            game.start();
+            //mlgGame = new MlgGame(window);
+            //mlgGame.start();
+            LwjglApplicationConfiguration cfg = new LwjglApplicationConfiguration();
+            cfg.title = "mlg";
+            //cfg.useGL30 = true;
+            cfg.width = 800;
+            cfg.height = 600;
+
+            new LwjglApplication(new MlgGame(window), cfg);
         });
 
         // Статистика
